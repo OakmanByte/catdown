@@ -5,9 +5,10 @@ const countdown = () => {
 
     const timeLeft = targetDate - currentDate; //ms
 
-    if (timeLeft < 0)
+    if (timeLeft < 0) {
         document.getElementById("countdown").innerHTML = "WE ARE GOING TO BARCELONA!!";
-
+        return;
+    }
 
     var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     timeLeft %= (1000 * 60 * 60 * 24);
@@ -22,3 +23,4 @@ const countdown = () => {
     document.getElementById("countdown").innerHTML = countdownString;
 
 }
+setInterval(countdown, 500);
