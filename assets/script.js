@@ -2,6 +2,7 @@
 console.log("Script loaded");
 
 const countdown = () => {
+    console.log("inside countdown");
     const targetDate = new Date(2025, 3, 1, 0, 0, 0, 0).getTime(); // April 1st, 2025 ms
     const currentDate = new Date().getTime(); //ms
 
