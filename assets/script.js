@@ -21,7 +21,7 @@ const countdown = () => {
     timeLeft %= (1000 * 60);
     let seconds = Math.floor(timeLeft / (1000));
 
-    let countdownString = `${days} : ${hours} : ${minutes} : ${seconds}`;
+    let countdownString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     document.getElementById("countdown").innerHTML = countdownString;
 
