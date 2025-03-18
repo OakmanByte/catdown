@@ -6,7 +6,7 @@ const countdown = () => {
     const targetDate = new Date(2025, 3, 1, 0, 0, 0, 0).getTime(); // April 1st, 2025 ms
     const currentDate = new Date().getTime(); //ms
 
-    const timeLeft = targetDate - currentDate; //ms
+    var timeLeft = targetDate - currentDate; //ms
 
     if (timeLeft < 0) {
         document.getElementById("countdown").innerHTML = "WE ARE GOING TO BARCELONA!!";
