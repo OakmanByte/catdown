@@ -1,6 +1,8 @@
 // Countdown logic example
+console.log("Script loaded");
+
 const countdown = () => {
-    const targetDate = new Date(2025, 3, 1, 0, 0, 0, 0).getTime(); //ms
+    const targetDate = new Date(2025, 3, 1, 0, 0, 0, 0).getTime(); // April 1st, 2025 ms
     const currentDate = new Date().getTime(); //ms
 
     const timeLeft = targetDate - currentDate; //ms
@@ -23,4 +25,5 @@ const countdown = () => {
     document.getElementById("countdown").innerHTML = countdownString;
 
 }
+countdown();
 setInterval(countdown, 500);
