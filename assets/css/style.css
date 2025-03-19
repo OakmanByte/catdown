@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/cat.ttf') format('truetype');
+}
+
+
+/* Base styling for the page */
+body {
+    font-family: 'MyCustomFont';
+    text-align: center;
+    padding: 20px;
+    background-color: blanchedalmond;
+    font-size: 2rem;
+    margin: 0;
+    /* Remove default body margin */
+    overflow: hidden;
+    /* Prevent scrollbars from appearing */
+}
+
+/* Countdown timer styling */
+#countdown {
+    margin-top: 5px;
+}
+
+/* Container for the game area */
+#game-area {
+    position: relative;
+    display: flex;
+    /* Using flexbox for horizontal layout */
+    justify-content: space-between;
+    /* Push the cats to the sides */
+    align-items: center;
+    /* Center the cats and puzzle vertically */
+    height: 80vh;
+    /* Take up 80% of the viewport height */
+    margin-top: 30px;
+}
+
+/* Styling for the cats */
+.cat-image {
+    width: 15rem;
+    /* Set a fixed width for the cat images */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Left cat positioning (Otis) */
+#otis {
+    margin-left: 2rem;
+    /* Space between the left edge and the cat */
+}
+
+/* Right cat positioning (Eira) */
+#eira {
+    margin-right: 2rem;
+    /* Space between the right edge and the cat */
+    transform: scaleX(-1);
+    /* Flip the right cat */
+}
+
+/* Puzzle box styling */
+#puzzle-box {
+    width: 800px;
+    /* Set a fixed width for the puzzle box */
+    height: 650px;
+    /* Set the height to match */
+    display: flex;
+    /* Center the puzzle inside the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+#solve-button {
+    width: 40px;
+    height: 20px;
+    background-color: green;
+}
+
+#solve-button:hover {
+    background-color: darkgreen;
+}
