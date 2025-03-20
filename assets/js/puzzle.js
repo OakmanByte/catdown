@@ -161,5 +161,25 @@ function startFireworks() {
         },
     });
     fireworks.start();
-    setTimeout(() => { fireworks.stop() }, 10000)
+    setTimeout(() => { fireworks.stop() }, 20000)
 }
+
+// Play sound for Otis when clicked
+document.getElementById('otis').addEventListener('click', () => {
+    const otisSound = document.getElementById('otis-sound');
+
+    // Reset the sound if it's already playing
+    if (otisSound.paused) {
+        otisSound.play();
+    }
+});
+
+// Play sound for Eira when clicked
+document.getElementById('eira').addEventListener('click', () => {
+    const eiraSound = document.getElementById('eira-sound');
+
+    // Reset the sound if it's already playing
+    if (eiraSound.paused) {
+        eiraSound.play();
+    }
+});
