@@ -19,8 +19,8 @@ function initializeCanvas(image) {
     });
     canvas.adjustImagesToPuzzleHeight();
     canvas.autogenerate({
-        horizontalPiecesCount: 2,
-        verticalPiecesCount: 2,
+        horizontalPiecesCount: 6,
+        verticalPiecesCount: 6,
     });
     canvas.shuffle(0.7);
     canvas.draw();
