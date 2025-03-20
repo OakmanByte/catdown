@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown to Barcelona</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="https://flbulgarelli.github.io/headbreaker/js/headbreaker.js"></script>
 </head>
 
 <body>
-    <h1>^ Countdown to Our Barcelona Trip! `</h1>
-    <div id="countdown"></div>
+    <div id="countdown-box">
+        <h1>^ Countdown to Our Barcelona Trip! `</h1>
+        <div id="countdown"></div>
+    </div>
+
+    <div id="level-button-box"></div>
+    <div id="winning-screen" hidden>
+        <h2>YOU WON!!!</h2>
+    </div>
 
     <div id="game-area">
         <div>
-            <img src="assets/images/cat.gif" id="otis" class="cat-image">
+            <img src="assets/images/cat.gif" id="otis" class="cat-image" alt="Cat Otis">
         </div>
         <div id="puzzle-box">
             <div id="puzzle-container"></div>
-            <button id="solve-button"></button>
         </div>
         <div>
-            <img src="assets/images/cat.gif" id="eira" class="cat-image">
+            <img src="assets/images/cat.gif" id="eira" class="cat-image" alt="Cat Eira">
         </div>
     </div>
+    <script src="assets/js/countdown.js"></script>
+    <script type="module" src="./assets/js/puzzle.js"></script>
 </body>
-
-<script src="assets/js/countdown.js"></script>
-<script src="https://flbulgarelli.github.io/headbreaker/js/headbreaker.js"></script>
-<script src="assets/js/puzzle.js"></script>
 
 </html>
