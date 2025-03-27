@@ -12,30 +12,32 @@
 
 <body>
     <div id="countdown-box">
-        <h1>^ Countdown to Our Barcelona Trip! `</h1>
+        <h1>Countdown to Our Barcelona Trip!</h1>
         <div id="countdown"></div>
     </div>
 
-    <div id="level-button-box"></div>
     <div id="winning-screen" hidden>
         <h2>YOU WON!!! You are the best!</h2>
     </div>
 
     <div id="game-area">
-        <div>
+        <!-- Cats Container for positioning -->
+        <div id="cats-container">
             <img src="assets/images/cat.gif" id="otis" class="cat-image" alt="Cat Otis" title="Otis">
             <!-- Audio element for Otis -->
             <audio id="otis-sound" src="assets/sounds/otis-meow.mp3"></audio>
-        </div>
-        <div id="puzzle-box">
-            <div id="puzzle-container"></div>
-        </div>
-        <div>
+
             <img src="assets/images/cat.gif" id="eira" class="cat-image" alt="Cat Eira" title="Eira">
             <!-- Audio element for Eira -->
             <audio id="eira-sound" src="assets/sounds/eira-meow.mp3"></audio>
         </div>
+
+        <!-- Puzzle box (below cats) -->
+        <div id="puzzle-box">
+            <div id="puzzle-container"></div>
+        </div>
     </div>
+
     <script src="assets/js/countdown.js"></script>
     <script type="module" src="./assets/js/puzzle.js"></script>
 </body>

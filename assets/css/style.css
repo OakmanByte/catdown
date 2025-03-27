@@ -11,71 +11,74 @@ body {
     font-size: 1.6rem;
     margin: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #countdown-box {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-#level-button-box {
-    display: flex;
-    justify-content: center;
-}
-
-.level-button {
-    width: 120px;
-    height: 60px;
-    background-color: rgb(34, 87, 22);
-    font-size: 1.5rem;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 1rem;
-}
-
-.level-button:hover {
-    border-color: black;
-    box-shadow: 0px 4px 8px rgba(8, 8, 31, 0.992);
-}
-
-.level-button:disabled {
-    background-color: gray;
-    color: lightgray;
+    margin-bottom: 1rem;
 }
 
 #game-area {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
+/* Cats container (above puzzle, centered horizontally) */
+#cats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    /* Ensure it's above the puzzle */
+    top: 0;
+}
+
+/* Cats positioning */
 .cat-image {
     width: 15rem;
 }
 
-/* Left cat positioning (Otis) */
-#otis {
-    margin-left: 2rem;
-}
-
-/* Right cat positioning (Eira) */
-#eira {
-    margin-right: 2rem;
-    transform: scaleX(-1);
-}
-
+/* Puzzle box fullscreen and centered */
 #puzzle-box {
-    border: 2px solid red;
-    max-width: 90%;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 12rem);
+    /* Adjust height based on cat height */
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    margin-bottom: -4rem;
+}
+
+#puzzle-container {
+    width: 100%;
+    height: 100%;
 }
 
 #fireworks-container {
     border: 2px solid purple;
+}
+
+#winning-screen {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
